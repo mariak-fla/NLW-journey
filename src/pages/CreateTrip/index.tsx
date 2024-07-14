@@ -13,6 +13,7 @@ export function CreateTripPage() {
   const [isGuestsInputOpen, setIsGuestsInputOpen] = useState(false);
   const [isGuestsModalOpen, setIsGuestsModalOpen] = useState(false);
   const [isConfirmTripModalOpen, setIsConfirmTripModalOpen] = useState(false);
+  const [emailsToInvite, setEmailsToInvite] = useState(["johndoe@example.com"]);
 
   const [destination, setDestination] = useState("");
   const [ownerName, setOwnerName] = useState("");
@@ -20,8 +21,6 @@ export function CreateTripPage() {
   const [tripStartAndEndDates, setTripStartAndEndDates] = useState<
     DateRange | undefined
   >();
-
-  const [emailsToInvite, setEmailsToInvite] = useState([]);
 
   function openGuestsInput() {
     setIsGuestsInputOpen(true);
@@ -90,7 +89,7 @@ export function CreateTripPage() {
     }
 
     if (!ownerEmail || !ownerName) {
-      return
+      return;
     }
 
     /* console.log(destination)

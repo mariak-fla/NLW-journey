@@ -1,4 +1,4 @@
-import { CheckCircle, CheckCircle2, CircleDashed, UserCog } from "lucide-react";
+import { CheckCircle2, CircleDashed, UserCog } from "lucide-react";
 import { Button } from "../../components/Button";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";

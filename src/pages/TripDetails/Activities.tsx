@@ -1,6 +1,6 @@
 import { CircleCheck } from "lucide-react";
 import { api } from "../../lib/axios";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { format } from "date-fns";
 
@@ -10,7 +10,7 @@ interface Activity {
     id: string;
     title: string;
     occurs_at: string;
-  };
+  }[];
 }
 
 export function Activities() {
@@ -19,7 +19,7 @@ export function Activities() {
 
   useEffect(() => {
     api
-      .get(`/trips/${tripId}/activities`)
+      .get(`trips/${tripId}/activities`)
       .then((response) => setActivities(response.data.activities));
   }, [tripId]);
 
@@ -27,10 +27,10 @@ export function Activities() {
     <div className="space-y-8">
       {activities.map((category) => {
         return (
-          <div className="space-y-2.5" key={category.date}>
+          <div key={category.date} className="space-y-2.5">
             <div className="flex gap-2 items-baseline">
               <span className="text-xl text-zinc-300 font-semibold">
-                {format(category.date, "LLL do")}
+                Dia {format(category.date, "LLL do")}
               </span>
               <span className="text-xs text-zinc-500">
                 {format(category.date, "EEEE")}
