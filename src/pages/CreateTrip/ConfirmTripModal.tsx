@@ -26,11 +26,7 @@ export function ConfirmTripModal({
             </button>
           </div>
           <p>
-            To confirm your trip to{" "}
-            <span className="text-zinc-100 font-semibold">Location</span>, set
-            from <span className="text-zinc-100 font-semibold">date</span> to{" "}
-            <span className="text-zinc-100 font-semibold">date</span>, please
-            fill out the form below.
+            Please fill out the form below to confirm your trip.
           </p>
         </div>
 

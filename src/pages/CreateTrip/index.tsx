@@ -92,12 +92,6 @@ export function CreateTripPage() {
       return;
     }
 
-    /* console.log(destination)
-    console.log(tripStartAndEndDates)
-    console.log(emailsToInvite)
-    console.log(ownerEmail)
-    console.log(ownerName) */
-
     const response = await api.post("/trips", {
       destination,
       starts_at: tripStartAndEndDates.from,
